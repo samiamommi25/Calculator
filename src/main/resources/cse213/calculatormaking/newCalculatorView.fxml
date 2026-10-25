@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cse213.calculatormaking.newCalculatorController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.calculatormaking.newCalculatorController">
+   <children>
+      <TextField fx:id="number1TF" layoutX="89.0" layoutY="50.0" />
+      <TextField fx:id="number2TF" layoutX="357.0" layoutY="50.0" />
+      <Label layoutX="23.0" layoutY="54.0" text="number1:" />
+      <Label layoutX="288.0" layoutY="54.0" text="number2:" />
+      <Label alignment="CENTER" layoutX="121.0" layoutY="236.0" prefHeight="54.0" prefWidth="311.0" style="-fx-background-color: lightblue;" text="OUTPUT">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="0.18181819626779266" cycleMethod="REPEAT" focusAngle="126.87" focusDistance="0.8990825863059508" radius="0.6926605417094099">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7200000286102295" green="0.0575999990105629" blue="0.37787193059921265" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.03902439024390244">
+                     <color>
+                        <Color red="0.7200000286102295" green="0.0575999990105629" blue="0.3887999951839447" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2737025243738305">
+                     <color>
+                        <Color red="0.7200000286102295" green="0.0575999990105629" blue="0.3887999951839447" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.39752486623116573">
+                     <color>
+                        <Color red="0.7200000286102295" green="0.0575999990105629" blue="0.3887999951839447" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5919279125496505">
+                     <color>
+                        <Color red="0.1937788724899292" green="0.0575999990105629" blue="0.7200000286102295" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8682467255358961">
+                     <color>
+                        <Color red="0.7200000286102295" green="0.0575999990105629" blue="0.3887999951839447" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="89.0" layoutY="139.0" mnemonicParsing="false" onAction="#additionButton" text="ADDITION" />
+      <Button layoutX="178.0" layoutY="139.0" mnemonicParsing="false" onAction="#subButton" text="SUBSTRUCTION" />
+      <Button layoutX="303.0" layoutY="139.0" mnemonicParsing="false" onAction="#mulButton" text="MULTIPLICATION" />
+      <Button layoutX="432.0" layoutY="139.0" mnemonicParsing="false" onAction="#diviButton" text="DIVISION" />
+   </children>
 </AnchorPane>
